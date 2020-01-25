@@ -1,0 +1,25 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage,tikz}
+\usepackage{framed,multicol}
+
+% This command just serves for the single repeated label. Of course these will not 
+% be the same but will yield the result.
+\newcommand{\repeatedlabel}[1]{%
+\foreach \x in {1,...,#1}%
+{%
+\addresslabel
+}%
+}
+
+% Sample address 
+\def\addresslabel{%
+\begin{framed}
+Janine Lee\par
+641 Caslon Place\par
+Hollywood, CA 9015B
+\end{framed}}
+\begin{document}
+\begin{multicols}{2}
+\repeatedlabel{8}
+\end{multicols}
+\end{document}
